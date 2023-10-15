@@ -24,52 +24,59 @@ where mounthly_salary < 2000;
 ```
 ___
 ### 3. Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
+```
 select employees.employee_name , salary.mounthly_salary from 
 employees FULL OUTER join salary 
 on employees.id = salary.id 
 where mounthly_salary is null;
-
+```
 ### 4. Вывести все зарплатные позиции  меньше 2000 но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
+```
 select employee_salary.employee_id , employees.employee_name , salary.mounthly_salary from employee_salary right join salary
 on employee_salary.salary_id = salary.id 
 FULL OUTER join employees
 on employees.id = employee_salary.employee_id 
 where employees.employee_name is null;
-
+```
 ### 5. Найти всех работников кому не начислена ЗП.
+```
 select employee_salary.employee_id , employees.employee_name , salary.mounthly_salary from employee_salary right join salary
 on employee_salary.salary_id = salary.id 
 FULL OUTER join employees
 on employees.id = employee_salary.employee_id
 where mounthly_salary is null;
-
+```
 ### 6. Вывести всех работников с названиями их должности.
+```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
 on roles.id = roles_employee.role_id;
-
+```
 ### 7. Вывести имена и должность только Java разработчиков.
+```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
 on roles.id = roles_employee.role_id
 where roles.role_name like '%Java dev%';
-
+```
 ### 8. Вывести имена и должность только Python разработчиков.
+```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
 on roles.id = roles_employee.role_id
 where roles.role_name like '%Python dev%';
-
+```
 ###  9. Вывести имена и должность всех QA инженеров.
+```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
 on roles.id = roles_employee.role_id
 where roles.role_name like '%QA engineer%'; 
-
+```
 ### 10. Вывести имена и должность ручных QA инженеров.
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
