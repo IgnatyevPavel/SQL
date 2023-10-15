@@ -4,10 +4,12 @@ SQL_DDL
 Таблица employees
 
 Создать таблицу employees
+```
 - id. serial,  primary key,
 - employee_name. Varchar(50), not null
 Наполнить таблицу employee 70 строками.
------------------------------------------
+```
+```
 CREATE TABLE employees(
     id SERIAL PRIMARY KEY,
     employee_name VARCHAR(50) NOT NULL
@@ -87,14 +89,16 @@ VALUES
         ('Alejandra Camino'),
         ('Jonas Bergulfsen'),
         ('Hari Kumar');
------------------------------------------
+```
+__
 Таблица salary
-
 Создать таблицу salary
+```
 - id. Serial  primary key,
 - monthly_salary. Int, not null
-
+```
 Наполнить таблицу salary 15 строками:
+```
 - 1000
 - 1100
 - 1200
@@ -111,8 +115,9 @@ VALUES
 - 2300
 - 2400
 - 2500
------------------------------------------
+```
 
+```
 CREATE TABLE salary(
     id SERIAL PRIMARY KEY,
     mounthly_salary INT NOT NULL
@@ -137,7 +142,8 @@ VALUES  (1000),
         (2300),
         (2400),
         (2500);
------------------------------------------
+```
+__
 Таблица employee_salary
 
 Создать таблицу employee_salary
