@@ -6,7 +6,7 @@
 ```
 SELECT * FROM students;
 ```
-__
+___
 2. Вывести всех студентов в таблице
 SELECT * FROM students;
 3. Вывести только Id пользователей
