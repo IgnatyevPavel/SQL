@@ -1,14 +1,14 @@
-SQL_DDL
-Первая часть.
+# SQL_DDL. Первая часть.
 
-Таблица employees
+### Таблица employees
 
-Создать таблицу employees
++ Создать таблицу employees
 ```
 - id. serial,  primary key,
 - employee_name. Varchar(50), not null
-Наполнить таблицу employee 70 строками.
 ```
++ Наполнить таблицу employee 70 строками.
+
 ```
 CREATE TABLE employees(
     id SERIAL PRIMARY KEY,
@@ -91,13 +91,13 @@ VALUES
         ('Hari Kumar');
 ```
 __
-Таблица salary
-Создать таблицу salary
+### Таблица salary
++ Создать таблицу salary
 ```
 - id. Serial  primary key,
 - monthly_salary. Int, not null
 ```
-Наполнить таблицу salary 15 строками:
++ Наполнить таблицу salary 15 строками:
 ```
 - 1000
 - 1100
@@ -116,7 +116,7 @@ __
 - 2400
 - 2500
 ```
-
++ Решение:
 ```
 CREATE TABLE salary(
     id SERIAL PRIMARY KEY,
@@ -144,16 +144,18 @@ VALUES  (1000),
         (2500);
 ```
 __
-Таблица employee_salary
+### Таблица employee_salary
 
-Создать таблицу employee_salary
++ Создать таблицу employee_salary
+```
 - id. Serial  primary key,
 - employee_id. Int, not null, unique
 - salary_id. Int, not null
-Наполнить таблицу employee_salary 40 строками:
-- в 10 строк из 40 вставить несуществующие employee_id
------------------------------------------
+```
++ Наполнить таблицу employee_salary 40 строками:
++ в 10 строк из 40 вставить несуществующие employee_id
 
+```
 CREATE TABLE employee_salary(
     id SERIAL PRIMARY KEY,
     employee_id INT UNIQUE NOT NULL,
@@ -209,15 +211,19 @@ VALUES (1,1),
        (138,8),
        (139,9),
        (140,10);
------------------------------------------
-Таблица roles
+```
+__
+### Таблица roles
 
-Создать таблицу roles
++ Создать таблицу roles
+```
 - id. Serial  primary key,
 - role_name. int, not null, unique
-Поменять тип столба role_name с int на varchar(30)
-Наполнить таблицу roles 20 строками:
------------------------------------------
+```
++ Поменять тип столба role_name с int на varchar(30)
++ Наполнить таблицу roles 20 строками:
+```
++ Решение: 
 CREATE TABLE roles(
     id SERIAL PRIMARY KEY,
     role_name INT UNIQUE NOT NULL
@@ -249,15 +255,20 @@ VALUES  ('Junior Python developer'),
         ('Junior Automation QA engineer'),
         ('Middle Automation QA engineer'),
         ('Senior Automation QA engineer');
------------------------------------------
-Таблица roles_employee
+```
+__
+### Таблица roles_employee
 
-Создать таблицу roles_employee
++ Создать таблицу roles_employee
+```
 - id. Serial  primary key,
 - employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
 - role_id. Int, not null (внешний ключ для таблицы roles, поле id)
-Наполнить таблицу roles_employee 40 строками:
------------------------------------------
+```
++ Наполнить таблицу roles_employee 40 строками:
+
++ Решение 
+```
 CREATE TABLE roles_employee(
     id SERIAL PRIMARY KEY,
     employee_id INT UNIQUE NOT null,
@@ -311,7 +322,7 @@ VALUES (1,1),
        (38,18),
        (39,19),
        (40,20);
------------------------------------------
+```
 
 
 
