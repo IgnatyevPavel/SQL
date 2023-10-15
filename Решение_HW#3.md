@@ -9,10 +9,12 @@
 > Если для какого-то кейса надо сделать дополнительную таблицу, наполнить её данными, то делайте )
 
 ### 1. Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами.
+```
 select employees.employee_name , salary.mounthly_salary from 
 employees inner join salary 
 on employees.id = salary.id ;
-
+```
+___
 ###  2. Вывести всех работников у которых ЗП меньше 2000.
 select employees.employee_name , salary.mounthly_salary from 
 employees inner join salary 
