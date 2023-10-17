@@ -232,6 +232,7 @@ where roles.role_name like '%Junior%';
 ```
 ___
 ### 22. Вывести сумму зарплат JS разработчиков
+```
 select AVG(salary.mounthly_salary) as Middle_salary  from roles_employee inner join roles
 on roles_employee.role_id = roles.id 
 join employee_salary
@@ -239,8 +240,10 @@ on roles_employee.employee_id  = employee_salary.employee_id
 join salary 
 on employee_salary.salary_id = salary.id 
 where roles.role_name like '%JavaS% dev%';
+```
 
 ### 23. Вывести минимальную ЗП QA инженеров
+```
 --все QA инженеры и зарплаты
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
@@ -251,7 +254,9 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%QA%';
+```
 --решение задачи
+```
 select MIN(salary.mounthly_salary) as Min_salary  from roles_employee inner join roles
 on roles_employee.role_id = roles.id 
 join employee_salary
