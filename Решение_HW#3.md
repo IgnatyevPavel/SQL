@@ -83,6 +83,7 @@ full OUTER join roles
 on roles.id = roles_employee.role_id
 where roles.role_name like '%QA engineer%'; 
 ```
+___
 ### 10. Вывести имена и должность ручных QA инженеров.
 ```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
@@ -151,7 +152,7 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Java dev%';
-
+___
 ### 16. Вывести зарплаты Python разработчиков
 ```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
@@ -213,7 +214,7 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Junior%QA%';
-
+___
 ### 21. Вывести среднюю зарплату всех Junior специалистов
 select AVG(salary.mounthly_salary) as Middle_salary  from roles_employee inner join roles
 on roles_employee.role_id = roles.id 
@@ -222,7 +223,7 @@ on roles_employee.employee_id  = employee_salary.employee_id
 join salary 
 on employee_salary.salary_id = salary.id 
 where roles.role_name like '%Junior%';
-
+___
 ### 22. Вывести сумму зарплат JS разработчиков
 select AVG(salary.mounthly_salary) as Middle_salary  from roles_employee inner join roles
 on roles_employee.role_id = roles.id 
