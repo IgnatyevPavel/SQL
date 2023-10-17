@@ -143,6 +143,7 @@ where roles.role_name like '%Senior%';
 ```
 ___
 ### 15. Вывести зарплаты Java разработчиков
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -152,6 +153,7 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Java dev%';
+```
 ___
 ### 16. Вывести зарплаты Python разработчиков
 ```
