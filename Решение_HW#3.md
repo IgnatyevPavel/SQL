@@ -315,6 +315,7 @@ on roles.id = roles_employee.role_id
 where roles.role_name like '%dev%';
 
 ### 28. Вывести фонд (сумму) зарплаты разработчиков.
+```
 --зарплаты всех сотрудников
 select employee_salary.employee_id, roles_employee.employee_id, salary.mounthly_salary, roles.role_name from employee_salary full outer join roles_employee
 on employee_salary.employee_id = roles_employee.employee_id
@@ -330,7 +331,7 @@ on salary.id = employee_salary.salary_id
 join roles 
 on roles_employee.role_id = roles.id
 where role_name like '%dev%';
-
+```
 ### 29. Вывести имена, должности и ЗП всех специалистов по возрастанию
 --таблицы из HW1 employees\salary\roles\employee_salary\roles_employee
 select employees.employee_name, roles.role_name, salary.mounthly_salary from employee_salary right join employees
