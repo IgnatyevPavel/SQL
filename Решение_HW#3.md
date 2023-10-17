@@ -78,20 +78,26 @@ on roles.id = roles_employee.role_id
 where roles.role_name like '%QA engineer%'; 
 ```
 ### 10. Вывести имена и должность ручных QA инженеров.
+```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
 on roles.id = roles_employee.role_id
-where roles.role_name like '%Manual QA engineer%'; 
+where roles.role_name like '%Manual QA engineer%';
+```
+___
 
 ### 11. Вывести имена и должность автоматизаторов QA
+```
 select employees.employee_name, roles.role_name from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
 on roles.id = roles_employee.role_id
 where roles.role_name like '%Automation QA engineer%'; 
-
+```
+___
 ### 12. Вывести имена и зарплаты Junior специалистов
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -101,8 +107,10 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Junior%';
-
+```
+___
 ### 13. Вывести имена и зарплаты Middle специалистов
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -112,8 +120,10 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Middle%';
-
+```
+___
 ### 14. Вывести имена и зарплаты Senior специалистов
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -123,7 +133,8 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Senior%';
-
+```
+___
 ### 15. Вывести зарплаты Java разработчиков
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
@@ -136,6 +147,7 @@ on employee_salary.salary_id = salary.id
 where roles.role_name like '%Java dev%';
 
 ### 16. Вывести зарплаты Python разработчиков
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -145,8 +157,10 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Python dev%';
-
+```
+___
 ### 17. Вывести имена и зарплаты Junior Python разработчиков
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -156,8 +170,10 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Junior Python dev%';
-
+```
+___
 ### 18. Вывести имена и зарплаты Middle JS разработчиков
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -167,8 +183,10 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%Middle JavaS%';
-
+```
+___
 ### 19. Вывести имена и зарплаты Senior Java разработчиков
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -177,7 +195,8 @@ join employee_salary
 on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id;
-
+```
+___
 ### 20. Вывести зарплаты Junior QA инженеров
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
