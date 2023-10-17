@@ -256,7 +256,8 @@ on roles_employee.employee_id  = employee_salary.employee_id
 join salary 
 on employee_salary.salary_id = salary.id 
 where roles.role_name like '%QA%';
-
+```
+___
 ### 24. Вывести максимальную ЗП QA инженеров
 --все QA инженеры и зарплаты
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
@@ -268,6 +269,7 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%QA%';
+```
 --решение задачи
 select MAX(salary.mounthly_salary) as Max_salary  from roles_employee inner join roles
 on roles_employee.role_id = roles.id 
@@ -276,7 +278,8 @@ on roles_employee.employee_id  = employee_salary.employee_id
 join salary 
 on employee_salary.salary_id = salary.id 
 where roles.role_name like '%QA%';
-
+```
+___
 ### 25. Вывести количество QA инженеров
 --таблицы из HW1 employees\salary\roles\employee_salary\roles_employee()
 select count(roles.role_name) as Quantity_QA_engineer from roles inner join roles_employee
