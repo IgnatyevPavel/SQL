@@ -283,6 +283,7 @@ where roles.role_name like '%QA%';
 ```
 ___
 ### 25. Вывести количество QA инженеров
+```
 --таблицы из HW1 employees\salary\roles\employee_salary\roles_employee()
 select count(roles.role_name) as Quantity_QA_engineer from roles inner join roles_employee
 on roles.id = roles_employee.role_id
@@ -291,8 +292,10 @@ where roles.role_name like '%QA%';
 select roles.role_name, roles_employee.id from roles full OUTER join roles_employee
 on roles.id = roles_employee.role_id
 where roles.role_name like '%QA%';
-
+```
+___
 ### 26. Вывести количество Middle специалистов.
+```
 select roles.role_name, roles_employee.id from roles full OUTER join roles_employee
 on roles.id = roles_employee.role_id
 where roles.role_name like '%Middle%';
@@ -300,7 +303,8 @@ where roles.role_name like '%Middle%';
 select count(roles.role_name) as Quantity_QA_engineer from roles inner join roles_employee
 on roles.id = roles_employee.role_id
 where roles.role_name like '%Middle%';
-
+```
+___
 ### 27. Вывести количество разработчиков
 select count(roles.role_name) as Quantity_QA_engineer from roles inner join roles_employee
 on roles.id = roles_employee.role_id
