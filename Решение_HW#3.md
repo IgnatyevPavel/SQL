@@ -331,6 +331,7 @@ on salary.id = employee_salary.salary_id
 order by salary.mounthly_salary ;
 
 ### 30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
+```
 select employees.employee_name, roles.role_name, salary.mounthly_salary from employee_salary right join employees
 on employees.id = employee_salary.employee_id
 join roles_employee
@@ -341,8 +342,9 @@ join salary
 on salary.id = employee_salary.salary_id 
 where salary.mounthly_salary between 1700 and 2300
 order by salary.mounthly_salary;
-
+```
 ### 31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300
+```
 select employees.employee_name, roles.role_name, salary.mounthly_salary from employee_salary right join employees
 on employees.id = employee_salary.employee_id
 join roles_employee
@@ -353,8 +355,10 @@ join salary
 on salary.id = employee_salary.salary_id 
 where salary.mounthly_salary < 2300
 order by salary.mounthly_salary;
+```
 
 ### 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
+```
 select employees.employee_name, roles.role_name, salary.mounthly_salary from employee_salary right join employees
 on employees.id = employee_salary.employee_id
 join roles_employee
@@ -365,3 +369,4 @@ join salary
 on salary.id = employee_salary.salary_id 
 where salary.mounthly_salary in (1100, 1500, 2000)
 order by salary.mounthly_salary;
+```
