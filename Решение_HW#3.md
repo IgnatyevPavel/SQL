@@ -15,6 +15,7 @@ employees inner join salary
 on employees.id = salary.id ;
 ```
 ___
+
 ###  2. Вывести всех работников у которых ЗП меньше 2000.
 ```
 select employees.employee_name , salary.mounthly_salary from 
