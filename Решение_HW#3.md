@@ -267,7 +267,8 @@ where roles.role_name like '%QA%';
 ```
 ___
 ### 24. Вывести максимальную ЗП QA инженеров
---все QA инженеры и зарплаты
++ все QA инженеры и зарплаты
+```
 select employees.employee_name, roles.role_name, employee_salary.salary_id , salary.mounthly_salary from employees inner join roles_employee
 on employees.id = roles_employee.employee_id 
 full OUTER join roles 
@@ -277,8 +278,10 @@ on employee_salary.employee_id = employees.id
 join salary 
 on employee_salary.salary_id = salary.id
 where roles.role_name like '%QA%';
+
 ```
 --решение задачи
+```
 select MAX(salary.mounthly_salary) as Max_salary  from roles_employee inner join roles
 on roles_employee.role_id = roles.id 
 join employee_salary
