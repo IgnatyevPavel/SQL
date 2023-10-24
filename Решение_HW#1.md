@@ -90,7 +90,7 @@ VALUES
         ('Jonas Bergulfsen'),
         ('Hari Kumar');
 ```
-__
+
 ### Таблица salary
 + Создать таблицу salary
 ```
